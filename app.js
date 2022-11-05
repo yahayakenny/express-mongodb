@@ -7,13 +7,11 @@ const app = express();
 
 //INTERNAL IMPORTS
 const schoolRoutes = require("./routes/schools");
-const userRoutes = require("./routes/users");
 
 ///MIDDLEWARES 
 app.use(cors())
 app.use(bodyParser.json())
 app.use("/schools", schoolRoutes);
-app.use("/users", userRoutes);
 
 //ROUTES
 app.get("/", (req, res) => {
